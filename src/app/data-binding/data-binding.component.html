@@ -1,0 +1,31 @@
+<div>
+    <input type="text" [(ngModel)]="userName">
+    <p>{{ userName }}</p>
+    <button type="reset" [disabled]="userName === ''"
+    (click)="userName = ''"> Reset </button>
+</div>
+<div>{{ title }}</div>
+<div>{{ num }}</div>
+<div>{{ user.userId }} {{ user.usernam }} {{ user.status }}</div>
+<div [ngStyle]="{color:colorval}">This example show property binding.</div>
+<div [innerHTML]='title'></div>
+<div [ngClass]="clsName"></div>
+<input [placeholder]="placeholder"><br />
+<a [href]='hrefval' [attr.updateLink]='updatedlink'> Google</a>
+<h4>Event Binding Example</h4>
+<button (click)="showAlert(10)">Click Me</button>
+<input (blur)="consoleLog()">
+
+<div>
+    <!-- Hello, Padma -->
+    <h1>Hello, {{customer}}</h1>
+    <ul>
+      <!-- Ebony and Chiho in a list-->
+      <li *ngFor="let customer of customers">{{ customer.value }}</li>
+    </ul>
+  </div>
+
+  <h4>Two way Data Binding Example</h4>
+  <input [(ngModel)]="firstname"  />
+  <button (click)="readFirst()">Read First</button>
+  <p>{{firstname}}</p>
